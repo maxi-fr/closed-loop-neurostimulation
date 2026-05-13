@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(.venv\\\\Scripts\\\\python.exe -c \"import marker; print\\(marker.__version__\\)\")",
+      "Bash(uv run *)"
+    ]
+  }
+}
