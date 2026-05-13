@@ -46,11 +46,11 @@ def main() -> None:
         "--output",
         type=Path,
         default=None,
-        help="Output directory (default: same directory as the PDF).",
+        help="Output directory (default: new dir in same dir as pdf with the name of the pdf).",
     )
     args = parser.parse_args()
     pdf_path: Path = args.pdf
-    output_dir: Path = args.output if args.output is not None else pdf_path.parent
+    output_dir: Path = args.output if args.output is not None else pdf_path.parent / pdf_path.stem
     if not pdf_path.exists():
         print(f"Error: file not found: {pdf_path}", file=sys.stderr)  # noqa: T201
         sys.exit(1)
