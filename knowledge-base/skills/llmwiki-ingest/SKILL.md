@@ -31,7 +31,7 @@ If the user provided a specific path as an argument, ingest only that file/folde
 Otherwise:
 
 1. Read `wiki/.manifest.json` (create empty `{}` if it doesn't exist).
-2. Scan these directories for markdown (and other readable) files:
+2. Scan these directories for markdown, PDF, and other readable files:
    - `raw/` (recursively, skip `raw/attachments/`)
    - `docs/` (recursively)
    - `notes/` (recursively)
@@ -69,7 +69,13 @@ Before processing sources:
 For each new source file, in order:
 
 ### 3a. Read and Analyze
-- Read the full source file
+- For markdown or text files, read the full source file.
+- For PDF files (`.pdf`):
+  1. Use the `run_shell_command` tool to execute `uv run skills/llmwiki-ingest/process_pdf.py "<path_to_pdf>" -o raw/<pdf_name>/`. This will create a markdown file and an `attachments` directory in a new folder alongside the PDF.
+  2. Read the generated markdown file.
+  3. **Invoke a subagent** to clean up the generated markdown. Automated PDF-to-Markdown conversion can introduce formatting issues or OCR artifacts. Ask the subagent to fix broken formatting, correct typos, ensure headings/lists/tables are well-formed, and improve overall readability.
+  4. Write the cleaned markdown back to the generated file.
+  5. Use the cleaned markdown content for the remainder of the analysis.
 - If the file references images in `raw/attachments/`, read key images for additional context
 - Identify: core concepts, claims/data points, relationships
 
