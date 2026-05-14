@@ -19,9 +19,6 @@ dev = [
     "validate-pyproject>=0.23",
     "ipykernel>=7.2.0",
 ]
-knowledge-base = [
-    "marker-pdf>=1.10.2",
-]
 
 [build-system]
 requires = ["uv_build>=0.10.8,<0.12"]

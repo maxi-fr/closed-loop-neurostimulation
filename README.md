@@ -17,6 +17,11 @@ This project uses [uv](https://github.com/astral-sh/uv) for dependency managemen
     ```bash
     uv sync
     ```
+    Pytorch and dependencies using it need to be installed seperately:
+    ```bash
+    uv pip install torch --torch-backend=auto
+    uv pip install marker-pdf
+    ```
 
 3.  Set up pre-commit hooks (this will run linting, formatting, and tests on every commit):
     ```bash
