@@ -1,3 +1,8 @@
+## Knowledge Base
+* Rename sources folder to summaries
+
+## Implementations
+
 ## For first meeting (26.05)
 
 Research:

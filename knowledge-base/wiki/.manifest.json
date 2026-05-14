@@ -10,5 +10,37 @@
       "concepts/volterra-model.md",
       "concepts/closed-loop-brain-stimulation.md"
     ]
+  },
+  "raw/Chouzouris_et_al_2021/Chouzouris_et_al_2021.md": {
+    "md5": "BC22C721FF9D3055F4D9F54F764AFBC1",
+    "ingested": "2026-05-14",
+    "wiki_pages": [
+      "sources/chouzouris-et-al-2021.md",
+      "concepts/optimal-nonlinear-control.md",
+      "concepts/fitzhugh-nagumo-model.md",
+      "concepts/human-connectome.md",
+      "concepts/closed-loop-brain-stimulation.md"
+    ]
+  },
+  "raw/Froehlich_Jezernik_2005/Froehlich_Jezernik_2005.md": {
+    "md5": "F4D2EB577EE66816F8781C8955102445",
+    "ingested": "2026-05-14",
+    "wiki_pages": [
+      "sources/froehlich-jezernik-2005.md",
+      "concepts/hodgkin-huxley-model.md",
+      "concepts/feedback-linearization.md",
+      "concepts/model-predictive-control.md",
+      "concepts/closed-loop-brain-stimulation.md"
+    ]
+  },
+  "raw/Salfenmose_Obermayer_2022/Salfenmose_Obermayer_2022.pdf": {
+    "md5": "D0E32600E17B7CA35EED146AB79B10F9",
+    "ingested": "2026-05-14",
+    "wiki_pages": [
+      "sources/salfenmose-obermayer-2022.md",
+      "concepts/optimal-nonlinear-control.md",
+      "concepts/neural-mass-model.md",
+      "concepts/closed-loop-brain-stimulation.md"
+    ]
   }
 }

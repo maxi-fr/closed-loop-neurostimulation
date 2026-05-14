@@ -71,13 +71,14 @@ For each new source file, in order:
 ### 3a. Read and Analyze
 - For markdown or text files, read the full source file.
 - For PDF files (`.pdf`):
-  1. Use the `run_shell_command` tool to execute `uv run skills/llmwiki-ingest/process_pdf.py "<path_to_pdf>" -o raw/<pdf_name>/`. This will create a markdown file and an `attachments` directory in a new folder alongside the PDF.
+  1. Execute `uv run skills/ingest/process_pdf.py "<path_to_pdf>" -o raw/<pdf_name>/`. This will create a markdown file and an `attachments` directory in a new folder alongside the PDF.
   2. Read the generated markdown file.
   3. **Invoke a subagent** to clean up the generated markdown. Automated PDF-to-Markdown conversion can introduce formatting issues or OCR artifacts. Ask the subagent to fix broken formatting, correct typos, ensure headings/lists/tables are well-formed, and improve overall readability.
   4. Write the cleaned markdown back to the generated file.
   5. Use the cleaned markdown content for the remainder of the analysis.
 - If the file references images in `raw/attachments/`, read key images for additional context
 - Identify: core concepts, claims/data points, relationships. **Crucially, track the specific locations (e.g., section headings, line numbers) where each claim is made.**
+- **Identify and extract mathematical descriptions and formulas** if they are necessary for a complete understanding of the concepts or claims. Use standard LaTeX syntax (`$$...$$` for blocks, `$ ... $` for inline).
 
 ### 3b. Create Source Summary
 Write a summary page in `wiki/sources/`:
@@ -98,7 +99,7 @@ updated: YYYY-MM-DD
 **Ingested:** YYYY-MM-DD
 
 ## Summary
-2-4 paragraph summary of key content.
+2-4 paragraph summary of key content. **Integrate mathematical formulas or models logically into the summary if they are central to the source's findings.**
 
 ## Key Takeaways
 - Bullet points of the most important facts, claims, or insights. **Include citations to specific locations in the raw file using alias syntax for readability (e.g., `[[relative/path/to/original.md#Section Name | Source Name]]`).**
@@ -129,10 +130,10 @@ updated: YYYY-MM-DD
 
 # Concept Name
 
-Definition and explanation of the concept.
+Definition and explanation of the concept. **Integrate formal mathematical definitions or models here if they are essential to defining the concept.**
 
 ## Key Points
-Information aggregated from all sources. **Every distinct claim must include a citation to the specific source and location using alias syntax for readability (e.g., `[[path/to/original.md#Heading | Source Name]]`).**
+Information aggregated from all sources. **Every distinct claim must include a citation to the specific source and location using alias syntax for readability (e.g., `[[path/to/original.md#Heading | Source Name]]`).** **Integrate mathematical descriptions naturally into the key points where they provide necessary formal backing.**
 
 ## Related Concepts
 - [[concepts/other-concept.md|Other Concept]] — relationship description

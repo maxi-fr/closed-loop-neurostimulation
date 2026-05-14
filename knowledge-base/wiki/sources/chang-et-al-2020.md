@@ -13,7 +13,9 @@ updated: 2026-05-14
 **Ingested:** 2026-05-14
 
 ## Summary
-This article investigates a closed-loop brain stimulation method using Model Predictive Control (MPC) to suppress epileptic seizures. The researchers used a Neural Mass Model (NMM) as a black-box representation of the brain. They identified a nonlinear auto-regressive moving-average (NARMA) Volterra model to characterize the relationship between stimulation input and neuronal responses. The MPC strategy then uses this Volterra model to generate optimal stimulation waveforms to eliminate epileptiform activity.
+This article investigates a closed-loop brain stimulation method using Model Predictive Control (MPC) to suppress epileptic seizures. The researchers used a Neural Mass Model (NMM) as a black-box representation of the brain. They identified a nonlinear auto-regressive moving-average (NARMA) Volterra model:
+$$ y(k) = F[y(k-1), \dots, y(k-n), u(k-1), \dots, u(k-m)] $$
+to characterize the relationship between stimulation input $u$ and neuronal responses $y$. The MPC strategy then uses this Volterra model to generate optimal stimulation waveforms to eliminate epileptiform activity.
 
 ## Key Takeaways
 - **Black-box Approach:** The control strategy does not require detailed prior knowledge of the brain's physiological parameters, treating it as a black box for system identification. [[raw/Chang_et_al_2020/Chang_et_al_2020.md#II. METHODS | Chang et al. 2020]]
