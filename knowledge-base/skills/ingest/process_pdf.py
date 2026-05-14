@@ -3,6 +3,7 @@
 import argparse
 import re
 import shutil
+import subprocess
 import sys
 from pathlib import Path
 
@@ -31,6 +32,12 @@ def convert_pdf(pdf_path: Path, output_dir: Path) -> None:
 
     text = re.sub(r"!\[\]\(([^/)]+\.jpeg)\)", r"![](attachments/\1)", text)
 
+    # 1. Normalize line endings (convert Windows \r\n to Unix \n)
+    text = text.replace("\r\n", "\n")
+
+    # 2. Remove invisible trailing spaces at the end of lines
+    text = re.sub(r"[ \t]+$", "", text, flags=re.MULTILINE)
+
     md_path = output_dir / f"{pdf_path.stem}.md"
     md_path.write_text(text, encoding="utf-8")
     if images:
@@ -38,6 +45,18 @@ def convert_pdf(pdf_path: Path, output_dir: Path) -> None:
         attachments_dir.mkdir(exist_ok=True)
         for img_name, img in images.items():
             img.save(attachments_dir / img_name)
+
+
+def llm_markdown_correction(path: Path) -> None:
+    """Let gemini correct formatting problems with extracted md."""
+    if path.exists():
+        cmd = [
+            "gemini",
+            "--prompt",
+            f"The markdown ({path.name}) was extracted from a pdf and therefore has some formatting issues. Reorder blocks if necessary and fix the latex math formulas.",
+            "--yolo",
+        ]
+        subprocess.run(cmd, cwd=path.parent, shell=True, stdout=sys.stdout, stderr=sys.stderr, timeout=600, check=False)  # noqa: S602
 
 
 def main() -> None:
@@ -62,6 +81,8 @@ def main() -> None:
     convert_pdf(pdf_path, output_dir)
 
     shutil.move(pdf_path, output_dir / pdf_path.name)
+
+    llm_markdown_correction((output_dir / pdf_path.name).with_suffix(".md").absolute())
 
     print(f"Converted: {pdf_path.name} -> {output_dir}")  # noqa: T201
 

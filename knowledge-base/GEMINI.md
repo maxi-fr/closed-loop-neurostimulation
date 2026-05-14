@@ -5,7 +5,7 @@ built from source documents. The LLM writes and maintains the wiki; the user cur
 and directs analysis.
 
 ### Source Directories (Immutable — never modify)
-- **`raw/`** — Primary source documents (articles, papers, clippings, notes). Attachments in `raw/attachments/`.
+- **`raw/`** — Primary source documents (articles, papers, clippings, notes) and their extracted .md versions
 
 ### Wiki Output (`wiki/`)
 All wiki pages live here. The LLM owns this directory entirely. Key files:
