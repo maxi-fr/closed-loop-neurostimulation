@@ -12,10 +12,10 @@ Based on [Andrej Karpathy's LLM Wiki idea](https://gist.github.com/karpathy/442a
 
 | Skill | Purpose |
 |-------|---------|
-| `llmwiki-ingest` | Process new/modified sources into the wiki (change detection) |
-| `llmwiki-search` | Search wiki via qmd and synthesize answers with citations |
-| `llmwiki-optimize` | Compact, merge, reorganize, strengthen cross-references |
-| `llmwiki-health` | Audit for broken links, orphans, contradictions, source drift |
+| `ingest` | Process new/modified sources into the wiki (change detection) |
+| `search` | Search wiki via qmd and synthesize answers with citations |
+| `optimize` | Compact, merge, reorganize, strengthen cross-references |
+| `health` | Audit for broken links, orphans, contradictions, source drift |
 
 **How it works:**
 
@@ -104,10 +104,10 @@ The root `GEMINI.md` file contains the base instructions for the agent.
 
 | Skill | Purpose | When to Use |
 |-------|---------|-------------|
-| `llmwiki-ingest` | Process new/modified sources, create/update wiki pages | After adding new files to `raw/` |
-| `llmwiki-search` | Search wiki via qmd and synthesize answers with citations | When asking questions against the knowledge base |
-| `llmwiki-optimize` | Compact, merge, reorganize, strengthen cross-references | Periodically as wiki grows (every ~10-20 ingests) |
-| `llmwiki-health` | Audit for broken links, orphans, contradictions, stale content | Periodically to maintain wiki quality |
+| `ingest` | Process new/modified sources, create/update wiki pages | After adding new files to `raw/` |
+| `search` | Search wiki via qmd and synthesize answers with citations | When asking questions against the knowledge base |
+| `optimize` | Compact, merge, reorganize, strengthen cross-references | Periodically as wiki grows (every ~10-20 ingests) |
+| `health` | Audit for broken links, orphans, contradictions, stale content | Periodically to maintain wiki quality |
 
 To use these skills, simply ask the agent to perform the task (e.g., "Ingest the new sources" or "Search the wiki for X").
 

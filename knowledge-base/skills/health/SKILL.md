@@ -1,5 +1,5 @@
 ---
-name: llmwiki-health
+name: health
 description: Check LLM Wiki health. Finds orphan pages, broken wikilinks, contradictions, stale content, missing pages, cross-reference gaps, and suggests improvements. Run periodically to keep the wiki in good shape.
 user-invokable: true
 allowed-tools: read_file, write_file, replace, run_shell_command, grep_search, glob, list_directory, update_topic, invoke_agent, mcp__plugin_qmd_qmd__query, mcp__plugin_qmd_qmd__status, mcp__plugin_qmd_qmd__get, mcp__plugin_qmd_qmd__multi_get
@@ -73,7 +73,7 @@ Read `wiki/.manifest.json` and verify source integrity:
    (Get-FileHash <file> -Algorithm MD5).Hash
    ```
 2. Compare against the stored hash. Report:
-   - **Modified sources:** MD5 differs — the source has changed since last ingest. Wiki pages may be stale. Suggest running the **llmwiki-ingest** skill to re-process.
+   - **Modified sources:** MD5 differs — the source has changed since last ingest. Wiki pages may be stale. Suggest running the **ingest** skill to re-process.
    - **Deleted sources:** File no longer exists on disk. Wiki pages referencing it may be orphaned.
    - **Untracked sources:** Files in `raw/`, `docs/`, `notes/` that aren't in the manifest at all — never ingested.
 3. Summarize: N modified, N deleted, N untracked out of N total tracked sources.
@@ -109,7 +109,7 @@ Present findings organized by severity:
 - Broken wikilinks
 - Contradictions between pages
 - Index out of sync
-- Modified sources with stale wiki pages (run **llmwiki-ingest**)
+- Modified sources with stale wiki pages (run **ingest**)
 
 ### Warning (fix soon)
 - Orphan pages

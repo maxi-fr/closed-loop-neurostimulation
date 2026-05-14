@@ -1,5 +1,5 @@
 ---
-name: llmwiki-optimize
+name: optimize
 description: Optimize the LLM Wiki. Compacts verbose pages, merges near-duplicates, reorganizes misplaced content, strengthens cross-references, improves consistency, and generates missing synthesis pages. Run periodically as the wiki grows.
 user-invokable: true
 allowed-tools: read_file, write_file, replace, run_shell_command, grep_search, glob, list_directory, update_topic, invoke_agent, mcp__plugin_qmd_qmd__query, mcp__plugin_qmd_qmd__status, mcp__plugin_qmd_qmd__get, mcp__plugin_qmd_qmd__multi_get

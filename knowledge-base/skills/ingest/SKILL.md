@@ -1,5 +1,5 @@
 ---
-name: llmwiki-ingest
+name: ingest
 description: Ingest new sources into the LLM Wiki. Reads unprocessed files from raw/, docs/, and notes/, creates source summaries, updates concept pages, maintains cross-references, and updates the index and log. Use when new files have been added.
 argument-hint: "[optional: specific file or folder path to ingest]"
 user-invokable: true
@@ -71,7 +71,7 @@ For each new source file, in order:
 ### 3a. Read and Analyze
 - For markdown or text files, read the full source file.
 - For PDF files (`.pdf`):
-  1. Use the `run_shell_command` tool to execute `uv run skills/llmwiki-ingest/process_pdf.py "<path_to_pdf>" -o raw/<pdf_name>/`. This will create a markdown file and an `attachments` directory in a new folder alongside the PDF.
+  1. Use the `run_shell_command` tool to execute `uv run skills/ingest/process_pdf.py "<path_to_pdf>" -o raw/<pdf_name>/`. This will create a markdown file and an `attachments` directory in a new folder alongside the PDF.
   2. Read the generated markdown file.
   3. **Invoke a subagent** to clean up the generated markdown. Automated PDF-to-Markdown conversion can introduce formatting issues or OCR artifacts. Ask the subagent to fix broken formatting, correct typos, ensure headings/lists/tables are well-formed, and improve overall readability.
   4. Write the cleaned markdown back to the generated file.
