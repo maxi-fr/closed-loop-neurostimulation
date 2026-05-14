@@ -1,5 +1,5 @@
 ---
-name: llmwiki-ingest
+name: ingest
 description: Ingest new sources into the LLM Wiki. Reads unprocessed files from raw/, docs/, and notes/, creates source summaries, updates concept pages, maintains cross-references, and updates the index and log. Use when new files have been added.
 argument-hint: "[optional: specific file or folder path to ingest]"
 user-invokable: true

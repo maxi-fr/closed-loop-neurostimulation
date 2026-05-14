@@ -1,5 +1,5 @@
 ---
-name: llmwiki-search
+name: search
 description: Search the LLM Wiki using qmd (hybrid BM25/vector search). Finds relevant wiki pages, reads them, and synthesizes an answer with citations. Use when asking questions against the knowledge base.
 argument-hint: "<search query>"
 user-invokable: true
