@@ -1,6 +1,7 @@
 """Convert a PDF file to Markdown and save image attachments."""
 
 import argparse
+import shutil
 import sys
 from pathlib import Path
 
@@ -41,16 +42,10 @@ def main() -> None:
         description="Convert a PDF to Markdown and save image attachments.",
     )
     parser.add_argument("pdf", type=Path, help="Path to the input PDF file.")
-    parser.add_argument(
-        "-o",
-        "--output",
-        type=Path,
-        default=None,
-        help="Output directory (default: new dir in same dir as pdf with the name of the pdf).",
-    )
+
     args = parser.parse_args()
     pdf_path: Path = args.pdf
-    output_dir: Path = args.output if args.output is not None else pdf_path.parent / pdf_path.stem
+    output_dir: Path = pdf_path.parent / pdf_path.stem
     if not pdf_path.exists():
         print(f"Error: file not found: {pdf_path}", file=sys.stderr)  # noqa: T201
         sys.exit(1)
@@ -61,6 +56,9 @@ def main() -> None:
         )
         sys.exit(1)
     convert_pdf(pdf_path, output_dir)
+
+    shutil.move(pdf_path, output_dir / pdf_path.name)
+
     print(f"Converted: {pdf_path.name} -> {output_dir}")  # noqa: T201
 
 
