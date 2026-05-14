@@ -17,6 +17,7 @@ dev = [
     "pre-commit>=3.0.0",
     "mypy>=1.0.0",
     "validate-pyproject>=0.23",
+    "ipykernel>=7.2.0",
 ]
 knowledge-base = [
     "marker-pdf>=1.10.2",

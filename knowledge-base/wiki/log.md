@@ -1,0 +1,12 @@
+## [2026-05-14] ingest | Chang_et_al_2020.md
+- Source: raw/Chang_et_al_2020/Chang_et_al_2020.md
+- Status: new
+- Pages created:
+  - [[Model Predictive Control for Seizure Suppression Based on Nonlinear Auto-Regressive Moving-Average Volterra Model]]
+  - [[Model Predictive Control]]
+  - [[Seizure Suppression]]
+  - [[Neural Mass Model]]
+  - [[Volterra Model]]
+  - [[Closed-loop Brain Stimulation]]
+- Pages updated: 0
+- New concepts: 5

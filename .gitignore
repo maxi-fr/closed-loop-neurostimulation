@@ -16,3 +16,5 @@ knowledge-base/raw*
 *.pdf
 *.docx
 *.pptx
+knowledge-base/.obsidian/
+random_stuff.ipynb

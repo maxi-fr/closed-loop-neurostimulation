@@ -1,6 +1,7 @@
 """Convert a PDF file to Markdown and save image attachments."""
 
 import argparse
+import re
 import shutil
 import sys
 from pathlib import Path
@@ -27,6 +28,9 @@ def convert_pdf(pdf_path: Path, output_dir: Path) -> None:
     converter = PdfConverter(artifact_dict=models)
     rendered = converter(str(pdf_path))
     text, _ext, images = text_from_rendered(rendered)
+
+    text = re.sub(r"!\[\]\(([^/)]+\.jpeg)\)", r"![](attachments/\1)", text)
+
     md_path = output_dir / f"{pdf_path.stem}.md"
     md_path.write_text(text, encoding="utf-8")
     if images:

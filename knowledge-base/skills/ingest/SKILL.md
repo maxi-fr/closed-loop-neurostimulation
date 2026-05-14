@@ -77,7 +77,7 @@ For each new source file, in order:
   4. Write the cleaned markdown back to the generated file.
   5. Use the cleaned markdown content for the remainder of the analysis.
 - If the file references images in `raw/attachments/`, read key images for additional context
-- Identify: core concepts, claims/data points, relationships
+- Identify: core concepts, claims/data points, relationships. **Crucially, track the specific locations (e.g., section headings, line numbers) where each claim is made.**
 
 ### 3b. Create Source Summary
 Write a summary page in `wiki/sources/`:
@@ -101,10 +101,10 @@ updated: YYYY-MM-DD
 2-4 paragraph summary of key content.
 
 ## Key Takeaways
-- Bullet points of the most important facts, claims, or insights
+- Bullet points of the most important facts, claims, or insights. **Include citations to specific locations in the raw file using alias syntax for readability (e.g., `[[relative/path/to/original.md#Section Name | Source Name]]`).**
 
 ## Related Concepts
-- [[Concept Name]] — brief note on relevance
+- [[concepts/concept-name.md|Concept Name]] — brief note on relevance
 
 ## Raw Notes
 Any additional details, quotes, or data worth preserving.
@@ -113,7 +113,7 @@ Any additional details, quotes, or data worth preserving.
 ### 3c. Create or Update Concept Pages
 For each significant concept mentioned in the source:
 
-- If `wiki/concepts/<concept>.md` exists: **update it** — add new information from this source, update the `sources` list in frontmatter, add `updated` date, ensure cross-references are correct.
+- If `wiki/concepts/<concept>.md` exists: **update it** — add new information from this source, update the `sources` list in frontmatter, add `updated` date, ensure cross-references are correct. Always cite the specific source and location for new claims.
 - If it doesn't exist: **create it** with information from this source. Add wikilinks to related concepts.
 
 Concept page template:
@@ -132,19 +132,19 @@ updated: YYYY-MM-DD
 Definition and explanation of the concept.
 
 ## Key Points
-Information aggregated from all sources.
+Information aggregated from all sources. **Every distinct claim must include a citation to the specific source and location using alias syntax for readability (e.g., `[[path/to/original.md#Heading | Source Name]]`).**
 
 ## Related Concepts
-- [[Other Concept]] — relationship description
+- [[concepts/other-concept.md|Other Concept]] — relationship description
 
 ## Sources
-- [[Source Summary]] — what this source says about the concept
+- [[sources/source-summary.md|Source Name]] — what this source says about the concept (include references to specific sections)
 ```
 
 ### 3d. Update Cross-References
 After creating/updating pages for a source:
 - Check all pages that were created or updated
-- Ensure bidirectional wikilinks exist (if A links to B, B should link to A)
+- Ensure bidirectional wikilinks exist and use full relative paths with aliases (e.g., `[[concepts/concept-name.md|Concept Name]]`)
 - Add links to the source summary from all concept pages it touches
 
 ## Step 4: Update Index
