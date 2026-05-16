@@ -42,5 +42,18 @@
       "concepts/neural-mass-model.md",
       "concepts/closed-loop-brain-stimulation.md"
     ]
+  },
+  "raw/Steffen_Cannon_2025/Steffen_Cannon_2025.md": {
+    "md5": "27A5190658A2880F29AEF4FEBCAFDDFB",
+    "ingested": "2026-05-14",
+    "wiki_pages": [
+      "sources/steffen-cannon-2025.md",
+      "concepts/closed-loop-brain-stimulation.md",
+      "concepts/model-predictive-control.md",
+      "concepts/parkinsons-disease.md",
+      "concepts/beta-band-oscillations.md",
+      "concepts/input-convex-neural-network.md",
+      "concepts/difference-of-convex-functions.md"
+    ]
   }
 }

@@ -1,31 +1,33 @@
 ---
 title: Closed-loop Brain Stimulation
 type: concept
-tags: [neurotechnology, stimulation, feedback]
-sources: [chang-et-al-2020.md, chouzouris-et-al-2021.md, froehlich-jezernik-2005.md, salfenmose-obermayer-2022.md]
+tags: [neurotechnology, stimulation, feedback, parkinsons-disease, epilepsy]
+sources: [chang-et-al-2020.md, chouzouris-et-al-2021.md, froehlich-jezernik-2005.md, salfenmose-obermayer-2022.md, steffen-cannon-2025.md]
 created: 2026-05-14
 updated: 2026-05-14
 ---
 
 # Closed-loop Brain Stimulation
 
-Closed-loop brain stimulation is an approach to neuromodulation where stimulation parameters $u(t)$ are automatically adjusted in real-time based on recorded neural activity $x(t)$ (feedback). This is often formalized as a control law $u(t) = f(x(t))$, where $f$ is the control policy.
+Closed-loop brain stimulation (CLBS) is an approach to neuromodulation where stimulation parameters $u(t)$ are automatically adjusted in real-time based on recorded neural activity $x(t)$ (feedback). This is often formalized as a control law $u(t) = f(x(t))$, where $f$ is the control policy.
 
 ## Key Points
-- **Contrast with Open-loop:** Traditional stimulation is often "open-loop," meaning it delivers constant pulses regardless of the brain's current state. [[raw/Chang_et_al_2020/Chang_et_al_2020.md#I. Introduction | Chang et al. 2020]]
+- **Contrast with Open-loop:** Traditional stimulation is often "open-loop," meaning it delivers constant pulses regardless of the brain's current state. This can lead to excessive stimulation, increased side effects, and patient habituation [[raw/Chang_et_al_2020/Chang_et_al_2020.md#I. Introduction | Chang et al. 2020]], [[raw/Steffen_Cannon_2025/Steffen_Cannon_2025.md#I. INTRODUCTION | Steffen & Cannon 2025]].
 - **Biophysical State Control:** Beyond simple signal modulation, closed-loop control can target the underlying biophysical states, such as the activation and inactivation of specific ion channels [[raw/Froehlich_Jezernik_2005/Froehlich_Jezernik_2005.md#2.4. Cascaded controller for control of ion channel activation/inactivation | Fröhlich & Jezernik 2005]].
 - **Bistability and State Switching:** In systems with multiple stable states (e.g., "up" and "down" activity states), closed-loop strategies can be used to switch between them with high efficiency [[raw/Salfenmose_Obermayer_2022/Salfenmose_Obermayer_2022.md#Abstract | Salfenmose & Obermayer 2022]].
-- **Minimal Intervention Strategy:** In noiseless systems, state switching can be achieved with a minimal control pulse that merely pushes the system across a basin of attraction boundary [[raw/Salfenmose_Obermayer_2022/Salfenmose_Obermayer_2022.md#3.2. | Salfenmose & Obermayer 2022]].
-- **Advantages:** Potential for higher therapeutic efficacy, reduced side effects, and lower energy consumption by only stimulating when and how it is needed. [[raw/Chang_et_al_2020/Chang_et_al_2020.md#I. Introduction | Chang et al. 2020]]
-- **Components:** Requires sensors to record brain activity (e.g., EEG or intracellular voltage), a controller to decide on stimulation changes (e.g., [[concepts/model-predictive-control.md|Model Predictive Control]]), and an actuator (stimulator). [[raw/Chang_et_al_2020/Chang_et_al_2020.md#I. Introduction | Chang et al. 2020]]
+- **Biomarker-based Feedback:** In Parkinson's Disease (PD), the amplitude of beta-band oscillations (13-30 Hz) serves as a primary biomarker for feedback, where stimulation is modulated to suppress pathological bursts [[raw/Steffen_Cannon_2025/Steffen_Cannon_2025.md#I. INTRODUCTION | Steffen & Cannon 2025]].
+- **Data-driven Nonlinear Control:** Recent advances employ deep learning models, such as **Difference of Convex Functions Neural Networks (DCNN)**, to model the nonlinear response of neural biomarkers to stimulation, enabling more precise and energy-efficient control than simple PI or linear algorithms [[raw/Steffen_Cannon_2025/Steffen_Cannon_2025.md#III. CONTROL LAW | Steffen & Cannon 2025]].
+- **Advantages:** Potential for higher therapeutic efficacy, reduced side effects, lower energy consumption, and slower rates of patient habituation by only stimulating when and how it is needed [[raw/Chang_et_al_2020/Chang_et_al_2020.md#I. Introduction | Chang et al. 2020]], [[raw/Steffen_Cannon_2025/Steffen_Cannon_2025.md#Abstract | Steffen & Cannon 2025]].
 
 ## Related Concepts
 - [[concepts/model-predictive-control.md|Model Predictive Control]] — An advanced control strategy for closed-loop systems.
 - [[concepts/optimal-nonlinear-control.md|Optimal Nonlinear Control]] — A framework for steering nonlinear network dynamics.
-- [[concepts/neural-mass-model.md|Neural Mass Model]] — Macroscopic models often used to design closed-loop controllers.
+- [[concepts/parkinsons-disease.md|Parkinson's Disease]] — A major clinical application for CLDBS.
+- [[concepts/beta-band-oscillations.md|Beta-band Oscillations]] — Key biomarker for feedback in PD CLDBS.
 
 ## Sources
 - [[sources/chang-et-al-2020.md|Model Predictive Control for Seizure Suppression Based on Nonlinear Auto-Regressive Moving-Average Volterra Model]] — Framework for real-time control of epileptic seizures using MPC and Volterra models.
 - [[sources/chouzouris-et-al-2021.md|Applications of optimal nonlinear control to a whole-brain network of FitzHugh-Nagumo oscillators]] — Framework for state-switching and synchronization in large-scale brain networks.
 - [[sources/froehlich-jezernik-2005.md|Feedback control of Hodgkin–Huxley nerve cell dynamics]] — Demonstrates closed-loop control of ion channel states for AP generation and suppression.
 - [[sources/salfenmose-obermayer-2022.md|Nonlinear optimal control of a mean-field model of neural population dynamics]] — Analyzes efficient switching strategies in biophysically grounded models.
+- [[sources/steffen-cannon-2025.md|Deep Learning Model Predictive Control for Deep Brain Stimulation in Parkinson's Disease]] — Nonlinear data-driven MPC for beta-band suppression in PD.
