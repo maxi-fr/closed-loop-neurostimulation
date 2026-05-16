@@ -24,8 +24,9 @@ Model Predictive Control (MPC) is an advanced method of process control that ite
 
 ## Related Concepts
 - [[concepts/volterra-model.md|Volterra Model]] — A functional series model for nonlinear system identification.
-- [[concepts/input-convex-neural-network.md|Input-Convex Neural Network]] — A neural network architecture used to build convex models for MPC.
+- [[concepts/difference-of-convex-functions.md|Difference of Convex Functions]] — DCNN architecture combining ICNNs and sequential convex programming for efficient nonlinear MPC.
 - [[concepts/closed-loop-brain-stimulation.md|Closed-loop Brain Stimulation]] — The application domain for these control strategies.
+- [[concepts/feedback-linearization.md|Feedback Linearization]] — Inner-loop technique used in cascade with MPC for nonlinear plants.
 
 ## Sources
 - [[sources/chang-et-al-2020.md|Model Predictive Control for Seizure Suppression Based on Nonlinear Auto-Regressive Moving-Average Volterra Model]] — Describes the use of MPC for seizure suppression using a black-box identified Volterra model.

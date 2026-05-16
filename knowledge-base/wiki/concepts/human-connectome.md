@@ -20,6 +20,7 @@ The human connectome is the comprehensive map of neural connections in the human
 ## Related Concepts
 - [[concepts/neural-mass-model.md|Neural Mass Model]] — The structural framework on which neural mass models are built.
 - [[concepts/optimal-nonlinear-control.md|Optimal Nonlinear Control]] — Strategies for control often depend on connectome features.
+- [[concepts/fitzhugh-nagumo-model.md|FitzHugh-Nagumo Model]] — Node dynamics model coupled via connectome weights in whole-brain simulations.
 
 ## Sources
 - [[sources/chouzouris-et-al-2021.md|Applications of optimal nonlinear control to a whole-brain network of FitzHugh-Nagumo oscillators]] — Uses a DTI-derived connectome from the Human Connectome Project.

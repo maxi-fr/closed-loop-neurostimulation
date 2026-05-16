@@ -19,6 +19,7 @@ Parkinson's Disease (PD) is a progressive neurological disorder that primarily a
 ## Related Concepts
 - [[concepts/beta-band-oscillations.md|Beta-band Oscillations]] — The primary feedback signal for PD CLDBS.
 - [[concepts/closed-loop-brain-stimulation.md|Closed-loop Brain Stimulation]] — The framework for adaptive PD treatment.
+- [[concepts/model-predictive-control.md|Model Predictive Control]] — Used in advanced CLDBS to suppress pathological beta-band activity.
 
 ## Sources
 - [[sources/steffen-cannon-2025.md|Deep Learning Model Predictive Control for Deep Brain Stimulation in Parkinson's Disease]] — Discusses nonlinear control strategies for PD treatment.

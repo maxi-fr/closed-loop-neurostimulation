@@ -22,6 +22,7 @@ The FitzHugh-Nagumo (FHN) model is a simplified version of the Hodgkin-Huxley mo
 ## Related Concepts
 - [[concepts/neural-mass-model.md|Neural Mass Model]] — FHN is often used as the local dynamics in neural mass models of large-scale brain networks.
 - [[concepts/optimal-nonlinear-control.md|Optimal Nonlinear Control]] — Used to steer FHN network dynamics.
+- [[concepts/closed-loop-brain-stimulation.md|Closed-loop Brain Stimulation]] — Application domain for FHN-based whole-brain network control.
 
 ## Sources
 - [[sources/chouzouris-et-al-2021.md|Applications of optimal nonlinear control to a whole-brain network of FitzHugh-Nagumo oscillators]] — Uses FHN oscillators as nodes in a whole-brain network model.

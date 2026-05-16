@@ -24,6 +24,7 @@ The Hodgkin-Huxley (HH) model is a phenomenological model of action potential ge
 ## Related Concepts
 - [[concepts/closed-loop-brain-stimulation.md|Closed-loop Brain Stimulation]] — HH models are often used as the "plant" in closed-loop control simulations.
 - [[concepts/feedback-linearization.md|Feedback Linearization]] — A technique used to control the nonlinear HH dynamics.
+- [[concepts/model-predictive-control.md|Model Predictive Control]] — Used as the outer control layer for optimal ion channel tracking.
 
 ## Sources
 - [[sources/froehlich-jezernik-2005.md|Feedback control of Hodgkin–Huxley nerve cell dynamics]] — Uses the HH model to develop cascaded feedback control schemes for AP generation and annihilation.

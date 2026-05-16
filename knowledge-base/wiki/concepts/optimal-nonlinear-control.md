@@ -26,6 +26,8 @@ Optimal nonlinear control is an optimization-based framework for deriving contro
 - [[concepts/model-predictive-control.md|Model Predictive Control]] — A specific implementation of optimal control that uses a receding horizon.
 - [[concepts/closed-loop-brain-stimulation.md|Closed-loop Brain Stimulation]] — Application of optimal control to modulate brain activity.
 - [[concepts/neural-mass-model.md|Neural Mass Model]] — A biophysically realistic model type often used with nonlinear control.
+- [[concepts/fitzhugh-nagumo-model.md|FitzHugh-Nagumo Model]] — Node dynamics model in whole-brain networks steered via optimal nonlinear control.
+- [[concepts/human-connectome.md|Human Connectome]] — Structural backbone of the network; topology influences optimal control strategies.
 
 ## Sources
 - [[sources/chouzouris-et-al-2021.md|Applications of optimal nonlinear control to a whole-brain network of FitzHugh-Nagumo oscillators]] — Application of the framework to state-switching and synchronization in a whole-brain connectome model.

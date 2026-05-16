@@ -10,15 +10,18 @@
 ## Concepts
 - [[concepts/beta-band-oscillations.md|Beta-band Oscillations]] — Neural rhythms (13-30 Hz) used as a primary biomarker for Parkinson's Disease.
 - [[concepts/closed-loop-brain-stimulation.md|Closed-loop Brain Stimulation]] — Automated adjustment of stimulation parameters based on real-time feedback.
-- [[concepts/difference-of-convex-functions.md|Difference of Convex Functions]] — Mathematical framework for modeling nonlinear systems with efficient optimization properties.
+- [[concepts/difference-of-convex-functions.md|Difference of Convex Functions and ICNN]] — DC functions and ICNN architecture for structured nonlinear modeling and efficient MPC optimization.
 - [[concepts/feedback-linearization.md|Feedback Linearization]] — Technique used to handle nonlinearities by transforming them into linear forms.
 - [[concepts/fitzhugh-nagumo-model.md|FitzHugh-Nagumo Model]] — Simplified neuron model for excitable systems and large-scale brain dynamics.
 - [[concepts/hodgkin-huxley-model.md|Hodgkin-Huxley Model]] — Detailed biophysical model of action potential generation and ion channel dynamics.
 - [[concepts/human-connectome.md|Human Connectome]] — Comprehensive map of structural neural connections in the human brain.
-- [[concepts/input-convex-neural-network.md|Input-Convex Neural Network]] — Neural network architecture where the output is a convex function of the inputs.
 - [[concepts/model-predictive-control.md|Model Predictive Control]] — Advanced control method using optimization and predictive models.
 - [[concepts/neural-mass-model.md|Neural Mass Model]] — Macroscopic neurophysiological model for simulating EEG activity.
 - [[concepts/optimal-nonlinear-control.md|Optimal Nonlinear Control]] — Optimization-based framework for steering nonlinear dynamical systems.
 - [[concepts/parkinsons-disease.md|Parkinson's Disease]] — Progressive movement disorder targeted by deep brain stimulation.
 - [[concepts/seizure-suppression.md|Seizure Suppression]] — Methods and strategies to reduce or eliminate epileptic activity.
 - [[concepts/volterra-model.md|Volterra Model]] — Functional series representation for nonlinear dynamic system identification.
+
+## Synthesis
+- [[synthesis/control-strategy-landscape.md|Control Strategy Landscape]] — Compares the four control paradigms across all sources: feedback linearization, optimal nonlinear control, Volterra MPC, and DCNN Tube MPC.
+- [[synthesis/brain-model-taxonomy.md|Brain Model Taxonomy]] — Compares the four brain model types (HH, FHN, NMM, data-driven) by scale, fidelity, and control tractability.

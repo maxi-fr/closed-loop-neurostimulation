@@ -24,6 +24,10 @@ Closed-loop brain stimulation (CLBS) is an approach to neuromodulation where sti
 - [[concepts/optimal-nonlinear-control.md|Optimal Nonlinear Control]] — A framework for steering nonlinear network dynamics.
 - [[concepts/parkinsons-disease.md|Parkinson's Disease]] — A major clinical application for CLDBS.
 - [[concepts/beta-band-oscillations.md|Beta-band Oscillations]] — Key biomarker for feedback in PD CLDBS.
+- [[concepts/fitzhugh-nagumo-model.md|FitzHugh-Nagumo Model]] — Used as node dynamics in whole-brain closed-loop control simulations.
+- [[concepts/hodgkin-huxley-model.md|Hodgkin-Huxley Model]] — Single-neuron plant model in closed-loop control of ion channel dynamics.
+- [[concepts/volterra-model.md|Volterra Model]] — Black-box predictor used in data-driven MPC for closed-loop stimulation.
+- [[concepts/difference-of-convex-functions.md|Difference of Convex Functions]] — DCNN architecture for nonlinear modeling in data-driven closed-loop DBS.
 
 ## Sources
 - [[sources/chang-et-al-2020.md|Model Predictive Control for Seizure Suppression Based on Nonlinear Auto-Regressive Moving-Average Volterra Model]] — Framework for real-time control of epileptic seizures using MPC and Volterra models.

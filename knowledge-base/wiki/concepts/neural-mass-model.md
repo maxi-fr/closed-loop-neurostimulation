@@ -23,6 +23,8 @@ A Neural Mass Model (NMM) is a macroscopic neurophysiological model that simulat
 ## Related Concepts
 - [[concepts/seizure-suppression.md|Seizure Suppression]] — NMMs are often used as "virtual brains" to test suppression strategies.
 - [[concepts/optimal-nonlinear-control.md|Optimal Nonlinear Control]] — Used to find efficient ways to steer NMMs between different activity states.
+- [[concepts/closed-loop-brain-stimulation.md|Closed-loop Brain Stimulation]] — NMMs serve as the "virtual brain" plant in closed-loop control studies.
+- [[concepts/volterra-model.md|Volterra Model]] — System identification framework for building black-box models of NMM dynamics.
 
 ## Sources
 - [[sources/chang-et-al-2020.md|Model Predictive Control for Seizure Suppression Based on Nonlinear Auto-Regressive Moving-Average Volterra Model]] — Uses an NMM as a black-box model to test [[concepts/model-predictive-control.md|Model Predictive Control]] strategies.

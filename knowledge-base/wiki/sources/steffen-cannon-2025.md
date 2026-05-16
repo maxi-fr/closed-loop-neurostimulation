@@ -24,7 +24,7 @@ This paper presents a nonlinear data-driven Model Predictive Control (MPC) algor
 ## Related Concepts
 - [[concepts/closed-loop-brain-stimulation.md|Closed-loop Brain Stimulation]] — Application to Parkinson's Disease via beta-band suppression.
 - [[concepts/model-predictive-control.md|Model Predictive Control]] — Nonlinear implementation using DCNN and Tube MPC.
-- [[concepts/input-convex-neural-network.md|Input-Convex Neural Network]] — Core building block for the DC model representation.
+- [[concepts/difference-of-convex-functions.md|Difference of Convex Functions]] — DC functions and ICNN architecture used to build the nonlinear predictor.
 - [[concepts/parkinsons-disease.md|Parkinson's Disease]] — Clinical target for the proposed neurostimulation strategy.
 - [[concepts/beta-band-oscillations.md|Beta-band Oscillations]] — The primary biomarker used for feedback in PD CLDBS.
 
