@@ -16,5 +16,7 @@ Research:
     * neural-mass models: Cowan-Wilson, Jansen-Rit
 *  implementation frameworks for brain dynamics
     * which python simulators for brain dynamics, neurostimulation, and EEG signals?
+        * library by TU Berlin people - neurolib
+        *
 
 so that we have a first direction for the project.

@@ -54,5 +54,18 @@
       "concepts/beta-band-oscillations.md",
       "concepts/difference-of-convex-functions.md"
     ]
+  },
+  "raw/Thesis.md": {
+    "md5": "c63bf1b5c37b747ae8090156a5a913ca",
+    "ingested": "2026-05-18",
+    "wiki_pages": [
+      "sources/thesis-proposal.md",
+      "concepts/model-predictive-control.md",
+      "concepts/neural-mass-model.md",
+      "concepts/llms-in-neurostimulation.md",
+      "concepts/state-estimation.md",
+      "concepts/parkinsons-disease.md",
+      "concepts/seizure-suppression.md"
+    ]
   }
 }
